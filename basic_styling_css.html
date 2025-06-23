@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* 1. Basic Paragraph Styling */
+    .my-paragraph {
+      font-size: 18px;
+      color: #333;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      border: 1px solid lightgray;
+    }
+
+    /* 2. Center Box using Flexbox */
+    .center-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+
+    .center-box {
+      width: 200px;
+      height: 200px;
+      background-color: #6c757d;
+    }
+
+    /* 3. Button Hover Effect */
+    .hover-btn:hover {
+      background-color: #0d6efd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    /* 4. Navigation Link Styling */
+    .nav-link {
+      color: white;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .nav-link:hover {
+      background-color: #495057;
+    }
+
+    /* 5. Responsive Image */
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 6. Flexbox 3 Columns */
+    .three-columns {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .three-columns > div {
+      flex: 1 1 30%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 7. Shadow Styling */
+    .shadow-text {
+      text-shadow: 1px 1px 3px gray;
+    }
+
+    .box-shadow {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      background: white;
+    }
+
+    /* 8. Animated Button */
+    .animate-btn {
+      transition: transform 0.3s;
+    }
+
+    .animate-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* 9. Sticky Header */
+    .sticky-top-bar {
+      position: sticky;
+      top: 0;
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+
+    /* 10. Pseudo-class styling */
+    .first-letter::first-letter {
+      font-size: 200%;
+      color: #0d6efd;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    /* 11. Grid Layout */
+    .grid-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .grid-item {
+      background-color: #e0e0e0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 12. Form Styling */
+    .login-form input {
+      margin-bottom: 10px;
+    }
+
+    /* 13. Tooltip on Hover */
+    .tooltip-box {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-box::after {
+      content: "This is a tooltip";
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: black;
+      color: white;
+      padding: 5px;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .tooltip-box:hover::after {
+      opacity: 1;
+    }
+
+    /* 14. Dark Mode Simulation */
+    .dark-box {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+    }
+
+    /* 15. CSS Spinner */
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #0d6efd;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 30px auto;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 9. Sticky Header -->
+  <div class="sticky-top-bar text-center">
+    Sticky Header Example
+  </div>
+
+  <div class="container my-5">
+
+    <!-- 1. Styled Paragraph -->
+    <p class="my-paragraph">This is a styled paragraph with font size, color, and padding.</p>
+
+    <!-- 2. Center Box -->
+    <div class="center-area">
+      <div class="center-box"></div>
+    </div>
+
+    <!-- 3. Hover Button -->
+    <button class="btn btn-secondary hover-btn mb-3">Hover Button</button>
+
+    <!-- 4. Navigation Links -->
+    <nav class="bg-dark text-white mb-3">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Services</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- 5. Responsive Image -->
+    <img src="https://via.placeholder.com/800x400" class="responsive-img mb-4" alt="Example Image">
+
+    <!-- 6. Flexbox 3 Columns -->
+    <div class="three-columns mb-4">
+      <div>Column 1</div>
+      <div>Column 2</div>
+      <div>Column 3</div>
+    </div>
+
+    <!-- 7. Text & Box Shadow -->
+    <h2 class="shadow-text">Heading with Text Shadow</h2>
+    <div class="box-shadow my-3">Box with a soft shadow</div>
+
+    <!-- 8. Animated Button -->
+    <button class="btn btn-primary animate-btn">Hover to Scale</button>
+
+    <!-- 10. Pseudo-class Example -->
+    <p class="first-letter mt-4">
+      Styling the first letter and visited <a href="#">link</a>.
+    </p>
+
+    <!-- 11. Grid Layout -->
+    <div class="grid-boxes mb-4">
+      <div class="grid-item">Box 1</div>
+      <div class="grid-item">Box 2</div>
+      <div class="grid-item">Box 3</div>
+      <div class="grid-item">Box 4</div>
+    </div>
+
+    <!-- 12. Login Form -->
+    <form class="login-form mb-4">
+      <input type="text" placeholder="Username" class="form-control">
+      <input type="password" placeholder="Password" class="form-control">
+      <button class="btn btn-success mt-2">Login</button>
+    </form>
+
+    <!-- 13. Tooltip on Hover -->
+    <div class="tooltip-box">
+      ℹ️ Hover Me
+    </div>
+
+    <!-- 14. Dark Mode Block -->
+    <div class="dark-box mt-4">
+      This is a block with dark mode styling.
+    </div>
+
+    <!-- 15. Loading Spinner -->
+    <div class="spinner"></div>
+
+  </div>
+
+</body>
+</html>
